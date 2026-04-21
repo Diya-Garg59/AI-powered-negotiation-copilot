@@ -1,73 +1,226 @@
-# React + TypeScript + Vite
+# 🚀 AI Negotiation Copilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Smarter Salary Decisions with AI
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
 
-## React Compiler
+AI Negotiation Copilot is an end-to-end **AI-powered career intelligence platform** that helps users:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Simulate real-world salary negotiations
+* Analyze offer letters
+* Compare salary with market benchmarks
+* Generate negotiation strategies and responses
 
-## Expanding the ESLint configuration
+👉 The goal is to help users move from **confusion → clarity → confident action** during job negotiations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Problem Statement
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Many students and professionals:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Don’t know how to negotiate salary
+* Accept offers without proper analysis
+* Lack confidence and market awareness
+
+This project solves that by providing **data-driven AI assistance** for better decision-making.
+
+---
+
+## 🧠 Key Features
+
+### 💬 AI Negotiation Simulation
+
+Simulates a real-time conversation between **Candidate and HR** using AI.
+Helps users understand how negotiation flows in real scenarios.
+
+---
+
+### 📊 Strategy Analyzer
+
+Analyzes negotiation performance:
+
+* Strategy used
+* Concession pattern
+* Final outcome
+
+Provides a **clear summary and improvement suggestions**.
+
+---
+
+### ✍️ AI Response Generator
+
+Generates ready-to-use negotiation responses in different tones:
+
+* Formal
+* Confident
+* Assertive
+
+---
+
+### 📄 Offer Letter Analyzer
+
+Upload a PDF offer letter and get:
+
+* Salary breakdown
+* Key terms (notice period, probation, etc.)
+* Red flags
+* Positive points
+* Final verdict
+
+---
+
+### 📈 Salary Benchmark Intelligence
+
+Compare your salary with market data based on:
+
+* Role
+* Experience
+* Location
+
+Outputs:
+
+* Market range
+* Average salary
+* Your position (below / fair / above)
+* Suggested negotiation range
+
+---
+
+## 🧠 System Flow
+
+```text
+User Input
+   ↓
+AI Simulation
+   ↓
+Analysis & Insights
+   ↓
+Benchmark Comparison
+   ↓
+Decision Support
+   ↓
+Negotiation Action
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠 Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend
+
+* React.js
+* Tailwind CSS
+* Vite
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+
+### AI Integration
+
+* LLM-based APIs (OpenAI / Grok / OpenRouter)
+* Multi-agent negotiation simulation logic
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/ai-negotiation-copilot.git
+cd ai-negotiation-copilot
 ```
+
+---
+
+### 2. Install dependencies
+
+#### Server
+
+```bash
+cd server
+npm install
+```
+
+#### Client
+
+```bash
+cd client
+npm install
+```
+
+---
+
+### 3. Setup Environment Variables
+
+Create a `.env` file inside the `server` folder and add:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+OPENAI_API_KEY=your_api_key
+OPENAI_MODEL=gpt-4o-mini
+CLIENT_URL=http://localhost:5173
+NODE_ENV=development
+```
+
+---
+
+### 4. Run the project
+
+#### Start backend
+
+```bash
+cd server
+npm run dev
+```
+
+#### Start frontend
+
+```bash
+cd client
+npm run dev
+```
+
+---
+
+## 🔐 Security Note
+
+* `.env` files are ignored using `.gitignore`
+* API keys and secrets are NOT stored in the repository
+* Use `.env.example` for reference
+
+---
+
+
+## 💡 Future Improvements
+
+* Real-time market data integration
+* Advanced negotiation analytics
+* Multi-user collaboration
+* Enterprise integrations
+
+---
+
+## 📚 Key Learnings
+
+* Building AI systems is about solving real problems, not adding complexity
+* UX plays a crucial role in perceived intelligence
+* Decision support systems require clarity, not just automation
+
+
+---
+
+## ⭐ Show Your Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
